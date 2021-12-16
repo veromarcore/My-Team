@@ -179,7 +179,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" (click)="PreviousStep()" class="btn btn-default" >Return</button>
+						<button type="button" (click)="PreviousStep()" class="btn btn-default" [disabled]="step=='ONE'" >Return</button>
 						<button type="button" [disabled]="alerta || (step=='TWO' && csvDesc.fav_player==null) || (step=='ONE' && csvDesc.team_name==null)" 
 						*ngIf="step!='THREE'" (click)="NextStep()" class="btn btn-primary tooltip">
 							<span class="tooltiptext" *ngIf="(step=='TWO' && csvDesc.fav_player==null)">Please select a Favorite Player before continuing</span>
